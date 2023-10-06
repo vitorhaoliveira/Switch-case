@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    
+    <!-- 2. Leia três nomes de pessoas e seus pesos. Depois, imprima os dados (nome e peso) em ordem decrescente de peso. -->
+
+    <h1>Pesos</h1>
+    <div id="resultado"></div>
+    <script>
+        let nome1 = prompt("Digite seu nome")
+        let peso1 = Number(prompt("Digite o seu peso"))
+        let nome2 = prompt("Digite o segundo nome")
+        let peso2 = Number(prompt("Digite o segundo peso"))
+        let nome3 = prompt("Digite o terceiro nome")
+        let peso3 = Number(prompt("Digite o terceiro peso"))
+
+        switch (true) {
+            case peso1 >= peso2 && peso2 >= peso3:
+                document.getElementById("resultado").innerHTML = "Nome: " + nome1 + " Peso: " + peso1 + " kg" + "</br>" + "Nome: " + nome2 + " Peso: " + peso2 + " kg" + "</br>" + "Nome: " + nome3 + " Peso: " + peso3 + " kg";
+                break;
+            case peso1 >= peso3 && peso3 >= peso2:
+                document.getElementById("resultado").innerHTML = "Nome: " + nome1 + " Peso: " + peso1 + " kg" + "</br>" + "Nome: " + nome3 + " Peso: " + peso3 + " kg" + "</br>" + "Nome: " + nome2 + " Peso: " + peso2 + " kg";
+                break;
+            case peso2 >= peso1 && peso1 >= peso3:
+                document.getElementById("resultado").innerHTML = "Nome: " + nome2 + " Peso: " + peso2 + " kg" + "</br>" + "Nome: " + nome1 + " Peso: " + peso1 + " kg" + "</br>" + "Nome: " + nome3 + " Peso: " + peso3 + " kg";
+                break;
+            case peso2 >= peso3 && peso3 >= peso1:
+                document.getElementById("resultado").innerHTML = "Nome: " + nome2 + " Peso: " + peso2 + " kg" + "</br>" + "Nome: " + nome3 + " Peso: " + peso3 + " kg" + "</br>" + "Nome: " + nome1 + " Peso: " + peso1 + " kg";
+                break;
+            case peso3 >= peso2 && peso2 >= peso1:
+                document.getElementById("resultado").innerHTML = "Nome: " + nome3 + " Peso: " + peso3 + " kg" + "</br>" + "Nome: " + nome2 + " Peso: " + peso2 + " kg" + "</br>" + "Nome: " + nome1 + " Peso: " + peso1 + " kg";
+                break;
+            case peso3 >= peso1 && peso1 >= peso2:
+                document.getElementById("resultado").innerHTML = "Nome: " + nome3 + " Peso: " + peso3 + " kg" + "</br>" + "Nome: " + nome1 + " Peso: " + peso1 + " kg" + "</br>" + "Nome: " + nome2 + " Peso: " + peso2 + " kg";
+                break;
+            default:
+                document.getElementById("resultado").innerHTML = "Nomes desconhecidos";
+                break;
+        }
+    </script>
+</body>
+</html>

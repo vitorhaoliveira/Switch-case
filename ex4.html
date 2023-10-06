@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h1>Comissão</h1>
+    <div id="resultado"></div>
+    <script>
+
+        let nome = prompt("Digite o nome do funcionário:")
+        let vendas = Number(prompt("Digite a quantidade de vendas do funcionário:"))
+        let comissao = 0
+
+        switch (true) {
+            case vendas > 500:
+                comissao = vendas * 2.00
+                break;
+            case vendas > 250:
+                comissao = vendas * 1.50
+                break;
+            default:
+                comissao = vendas
+                break;
+        }
+
+        document.getElementById("resultado").innerHTML = "Nome do funcionário " + nome + "<br>" + "Total de comissão R$" + comissao.toFixed(2);
+    </script>
+</body>
+</html>

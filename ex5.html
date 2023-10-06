@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    <h1>Data</h1>
+    <div id="resultado"></div>
+    <script>
+
+        let data = prompt("Digite a data(Exemplo 12/12/2012):")
+        let nomeMes = ""
+        let partes = data.split("/")
+        let dia = parseInt(partes[0])
+        let mes = parseInt(partes[1])
+        let ano = parseInt(partes[2])
+        
+        switch (mes) {
+            case 1:
+                nomeMes = "janeiro";
+                break;
+            case 2:
+                nomeMes = "fevereiro";
+                break;
+            case 3:
+                nomeMes = "março";
+                break;
+            case 4:
+                nomeMes = "abril";
+                break;
+            case 5:
+                nomeMes = "maio";
+                break;
+            case 6:
+                nomeMes = "junho";
+                break;
+            case 7:
+                nomeMes = "julho";
+                break;
+            case 8:
+                nomeMes = "agosto";
+                break;
+            case 9:
+                nomeMes = "setembro";
+                break;
+            case 10:
+                nomeMes = "outubro";
+                break;
+            case 11:
+                nomeMes = "novembro";
+                break;
+            case 12:
+                nomeMes = "dezembro";
+                break;
+            default:
+                nomeMes = "Mês errado"
+        }
+
+        document.getElementById("resultado").innerHTML = dia + " de " + nomeMes + " de " + ano + ".";
+    </script>
+</body>
+</html>

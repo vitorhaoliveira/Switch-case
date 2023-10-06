@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+
+    <!-- a) Leia o nome do aluno.
+
+    b) Leia três notas do aluno e faça a média aritmética entre elas.
+    
+    c) Verifique se o aluno foi aprovado (média maior ou igual a 6,0). Depois, imprima a
+    
+    mensagem "O aluno <nome do aluno> foi aprovado com média <o valor da
+    
+    média>".
+    
+    d) Verifique se o aluno foi reprovado (média inferior a 6,0). Depois, imprima a
+    
+    mensagem "O aluno <nome do aluno> foi reprovado com média <o valor da
+    
+    média>".
+    
+    e) Coloque as três notas do aluno em ordem decrescente. -->
+
+    <h1>Média alunos.</h1>
+    <span id="resultado"></span>
+    <span id="notas"></span>
+    <script>
+        let nome = prompt("Digite o nome do aluno:")
+        let nota1 = Number(prompt("Digite a primeira nota:"))
+        let nota2 = Number(prompt("Digite a segunda nota:"))
+        let nota3 = Number(prompt("Digite a terceira nota"))
+
+        let media = (nota1 + nota2 + nota3) / 3;
+        let resultadoNota = "";
+
+        switch (true) {
+            case media >= 6 && media <= 10:
+                resultadoNota = "O aluno(a) " + nome + " foi aprovado(a) com a media de " + media.toFixed(1);
+                break;
+            case media < 6 && media >= 0:
+                resultadoNota = "O aluno(a)" + nome + " foi reprovado(a) com a media de " + media.toFixed(1);
+                break;
+            default:
+                resultadoNota = "Valor das médias erradas";
+        }
+
+        document.getElementById("resultado").innerHTML = resultadoNota
+
+         let decrescente = [nota1, nota2, nota3];
+         decrescente.sort((a, b) => b - a);
+
+         document.getElementById("notas").innerHTML = decrescente
+    </script>
+</body>
+</html>
